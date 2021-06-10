@@ -16,9 +16,20 @@ let textarea2 = document.createElement('textarea');
   textarea1.focus();
   textarea2.readOnly ='true';
   
+  
+  textarea1.onchange = function(){
+    var x = textarea1.value;
+	textarea2.innerHTML = x;
+} 
 
-  form.addEventListener('mouseenter', clonetext, false);
-  function clonetext(){
 
-      textarea2.innerHTML = textarea1.value;
-  }
+/* textarea1.onchange = function(){
+    textarea2.value = this.value;
+} */
+
+
+  /* form.addEventListener('keyup', clonetext, false);
+ function clonetext(){
+       
+      textarea2.innerHTML = textarea1.value; 
+   }  */  
