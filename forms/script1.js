@@ -12,14 +12,12 @@ input1.id = 'class';
 let but = document.createElement('button');
 let ul = document.createElement('ul');
 let but1 = document.createElement('button');
-let input_img = document.createElement('input');
+
 
 
 but.type = "submit";
 but.innerHTML = "Submit";
-input_img.type = "image";
-input_img.src = "https://e7.pngegg.com/pngimages/561/311/png-clipart-computer-icons-exit-icon-miscellaneous-angle.png";
-input_img.style.width = "25px";
+
 input1.type = "text";
 input2.type = "text";
 input1.placeholder = "Имя";
@@ -34,6 +32,10 @@ input1.focus();
     input1.required = true;
       let li = document.createElement("li");
       li.innerHTML = input1.value + " " + input2.value;
+      let input_img = document.createElement('input');
+      input_img.type = "image";
+      input_img.src = "https://e7.pngegg.com/pngimages/561/311/png-clipart-computer-icons-exit-icon-miscellaneous-angle.png";
+      input_img.style.width = "25px";
       li.append(input_img);
       ul.append(li);
       document.body.prepend(ul);
@@ -44,6 +46,7 @@ input1.focus();
              input_img.addEventListener('click', (event) => {
             li.remove();
          /* form.reset(); */
+                  
        }
     )
   }
